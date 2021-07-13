@@ -1,4 +1,5 @@
 # Slow down a function before calling it
+# https://realpython.com/primer-on-python-decorators/#slowing-down-code
 
 import functools
 import time

@@ -1,4 +1,5 @@
-# Measure the time a function takes to execute]
+# Measure the time a function takes to execute
+# https://realpython.com/primer-on-python-decorators/#timing-functions
 
 import functools
 import time

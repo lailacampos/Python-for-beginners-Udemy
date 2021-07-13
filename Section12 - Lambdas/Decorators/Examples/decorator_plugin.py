@@ -1,5 +1,6 @@
 # Decorators don't have to wrap the function they're decorating.
 # They can also simply register that a function exists and return it unwrapped.
+# https://realpython.com/primer-on-python-decorators/#registering-plugins
 
 import random
 
@@ -45,7 +46,18 @@ def randomly_greet(name):
 
     # The choice() method returns a randomly selected element from the specified sequence
     # list() function -> https://www.programiz.com/python-programming/methods/built-in/list
-    greeter, greeter_function = random.choice(list())
+    # list() will receive an iterable as argument and return a list
+    # In the case of dictionaries, the keys of the dictionary will be the items of the list.
+    # Also, the order of the elements will be random
+    greeter, greeter_function = random.choice(list(PLUGINS.items()))
+
+    print(f'Using {greeter!r}')
+    print(type(greeter))
+    print(type(greeter_function))
+    return greeter_function(name)
+
+
+randomly_greet('Laila')
 
 
 
