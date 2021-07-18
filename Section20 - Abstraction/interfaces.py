@@ -1,4 +1,5 @@
 # Interfaces
+# https://realpython.com/python-interface/
 
 # At a high level, an interface acts as a blueprint for designing classes. Like classes, interfaces define methods.
 # Unlike classes, these methods are abstract. An abstract method is one that the interface simply defines.
