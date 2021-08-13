@@ -46,4 +46,4 @@ print(re.search('(ba[rz]){2,4}(qux)?', 'barbar'))  # match = 'barbar'
 
 # '(foo(bar)?)+(\d\d\d)?' = String it all together and you get: at least one occurrence of 'foo' optionally followed by
 #                           'bar', all optionally followed by three decimal digit characters.
-
+print(re.search('(foo(bar)?)+(\d\d\d)?', 'foofoobar123'))  # match = 'foofoobar123'

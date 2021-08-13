@@ -10,6 +10,7 @@
 import re
 
 # * metacharacter
+# Matches zero or more repetitions of the preceding regex.
 
 print(re.search('foo-*bar', 'foobar'))  # Returns a match because there are 0 '-' characters between 'foo' and 'bar'
 print(re.search('foo-*bar', 'foo-bar'))  # Returns a match because there are 1 '-' characters between 'foo' and 'bar'
@@ -58,6 +59,7 @@ print(re.search('<.*>', '%<foo> <bar> <baz>'))  # In this case the match ends wi
 # *?
 # To be able to get the shortest possible match instead, then use the non-greedy metacharacter sequence *?:
 print(re.search('<.*?>', '%<foo> <bar <baz>>')) # In this case the match ends with the '>' character following 'foo'
+# <.*> matches the first '<' character and then the FIRST '>' character
 
 # +?
 # '<.+?>' = There must be at least one alphanumeric character between '<' and the shortest '>'.
@@ -95,7 +97,7 @@ for i in range(1,6):
 # <regex>{m,}	Any number of repetitions of <regex> greater than or equal to m
 # <regex>{,} = <regex>{0,}<regex>* = Any number of repetitions of <regex>
 
-# If m, n and the comma are ommited, then the curly braces no longer function as metacharacters.
+# If m, n and the comma are omitted, then the curly braces no longer function as metacharacters.
 # {} matches just the literal string '{}'
 print(re.search('x{}x', 'x{}x')) # Returns a match
 

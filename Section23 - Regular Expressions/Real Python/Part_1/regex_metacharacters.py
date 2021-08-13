@@ -34,13 +34,13 @@ print(match)
 # Metacharacters That Match a Single Character
 
 # [ ]
-# Characters inside square brackets ([]) represent a character class—an enumerated set of characters to match from.
+# Characters inside square brackets ([]) represent a character class — an enumerated set of characters to match from.
 # A character class metacharacter sequence will match any single character contained in the class.
 # [123] will match any single character '1', '2' or '3'
-match = re.search('ab[123]', '-----ab3---')  # Will return a match object
+match = re.search('ab[123]', '-----ab3---')  # match='ab3'
 print(match)
 
-match = re.search('ab[123]', '----ab1----')  # Will return a match object
+match = re.search('ab[123]', '----ab1----')  # match='ab1'
 print(match)
 
 # A character class can also contain a range of characters.

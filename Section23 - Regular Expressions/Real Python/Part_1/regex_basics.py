@@ -18,4 +18,4 @@ str = 'foo123bar'
 match = re.search('123', str)
 
 # A match object is truthy (a value that is True in a boolean context).
-print(match)
+print(match.span().index(3))
